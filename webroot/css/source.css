@@ -17,6 +17,8 @@
 
 .src-container {
   min-width: 40em;
+  line-height: 1.75em;
+  font-family: monospace;
 }
 
 .src-header {

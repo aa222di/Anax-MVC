@@ -1,0 +1,361 @@
+/* IMPORTED STYLES AND FONTS
+------------------------------------------------------------------------------*/
+
+
+
+
+/* FONTS
+------------------------------------------------------------------------------*/
+
+html, a {
+		font: normal normal 300 17px/1.5em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		color: #525252;
+	
+}
+
+p {
+		
+		line-height: 1.5em;
+		margin-bottom: 10px;
+		text-align: justify;
+}
+
+h1 {
+		font: normal normal 300 2em/1.5em  Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+		color: black;
+}
+
+
+h2 {
+		font: normal normal 300 1.2em/1.5em Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+		color: black;
+}
+
+h3 {
+		font: normal normal 600 1.2em/1.5em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		
+}
+
+h4 {
+		font: normal normal 600 1.1em/1.5em "Arial", sans-serif;
+}
+
+a {
+		color: 				#333;
+		text-decoration: 	underline;	
+}
+
+a:hover {
+		text-decoration: 	none;	
+}
+
+.center {
+	text-align:center;
+}
+
+ul {
+	list-style: square inside;
+	line-height: 1.5em;
+}
+
+pre {
+	font-family: monospace;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+h1>a {
+	font: inherit;
+	text-decoration: none;
+}
+
+
+/* IMAGES
+------------------------------------------------------------------------------*/
+img {
+		padding-top: 0.5em;
+		max-width: 100%;	
+}
+
+figcaption{
+	text-align:center;
+	font-size: 0.75em;
+	font-style: italic;	
+}
+
+.thumbnail {
+	max-height: 50px;	
+	max-width: 100px;
+}
+
+
+/* HEADER
+------------------------------------------------------------------------------*/
+.logo-section{
+		background-color: #000;
+		padding: 40px 0 40px 0;
+}
+
+.sitelogo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
+
+.sub-section {
+	border-bottom: 4px solid #000;
+}
+
+#header {
+	padding-bottom: 40px;
+}
+
+
+/* FOOTER
+------------------------------------------------------------------------------*/
+
+/*
+
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+
+*/
+
+html, body {
+	height: 100%;
+}
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -200px; /* the bottom margin is the negative value of the footer's height */
+}
+#footer, .push {
+	height: 200px; /* .push must be the same height as .footer */
+	margin: 0 auto;
+	
+}
+
+#footer{
+	background-color: #000;
+	padding-top: 20px;
+}
+
+.sitefooter, .footer-links  {
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	color: #D0975A;
+	font-size: 0.8em;
+}
+
+.footer-links a{
+	color: #686868;
+
+	}
+
+/* CUSTOM BUTTONS
+------------------------------------------------------------------------------*/
+
+a.button {
+	padding: 20px;
+	display: inline-block;
+	background-color: #333;	
+	width: 100%;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-variant: small-caps;
+}
+
+a.smallbutton {
+	padding: 5px;
+	display: inline-block;
+	background-color: #333;	
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 10px 5px 0;
+}
+
+a.button:hover, a.smallbutton:hover {
+	background-color: #888;	
+	cursor: pointer; 
+}
+
+/* FORMS
+------------------------------------------------------------------------------*/
+
+
+select.dice{
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    border: 2px solid #888;	
+    padding: 5px;
+    font-size: 17px;
+}
+
+input{
+	display: inline-block;
+	margin: 5px 0 10px 0;
+	padding: 5px;
+	font-size: 1em;
+	border: 2px solid #888;	
+
+	
+}
+
+.edit input[type=text] {
+	width: 100%;
+	}
+
+input[type=submit] {
+
+	padding: 5px 10px;
+	display: inline-block;
+	background-color: #333;	
+	color: white;
+	text-align: center;
+}
+
+input[type=submit]:hover {
+	background-color: #888;	
+	cursor: pointer; 
+}
+
+p#years>input {
+	width:25%;	
+}
+
+label{
+	display: block;
+	
+	
+}
+
+legend {
+	font: normal normal 300 1.2em/1.5em "Arial", sans-serif;
+	border-bottom: 2px solid #888;	
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+textarea {
+	width: 100%;
+	height: 400px;
+}
+
+
+/* TABLES
+------------------------------------------------------------------------------*/
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		
+		
+	}
+	
+	td, th {
+		
+		padding: 0.5em;
+		vertical-align: middle;
+		text-align: left;
+		border-bottom: 2px solid #d1d1d1;
+}
+
+	thead {
+		border-bottom: 2px solid #888;
+		font-weight: 600;
+	}
+
+/* BORDERS AND PADDING
+------------------------------------------------------------------------------*/
+
+.border {
+	border: 4px double #333;	
+}
+
+.borderbottom {
+	border-bottom: 2px solid #333;	
+}
+
+section.extrapadding {
+	padding-top: 40px;	
+	
+}
+
+/* MISC. CLASSES
+------------------------------------------------------------------------------*/
+
+p.underline {
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+ul.horizontal>li {
+	display: inline-block;
+	float: left;	
+	padding-right: 5px;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+nav.pagenav {
+text-align: center;
+
+}
+
+.debug {
+	font-size: smaller;
+	color: #aaa;
+}
+
+/* ARTICLE
+------------------------------------------------------------------------------*/
+
+.article1 img {
+	width: 30%;
+	float: right;
+	padding: 20px;
+}
+
+.article1 {
+	margin-left: 25%;
+}
+
+.byline {
+    border-top: 2px dotted;
+    font-size: 0.9em;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,22 +15,17 @@
 
 <div id='wrapper'>
 
-<div id='header'>
-<?php if(isset($header)) echo $header?>
-<?php $this->views->render('header')?>
-</div>
-
-<?php if ($this->views->hasContent('navbar')) : ?>
-<div id='navbar'>
-<?php $this->views->render('navbar')?>
-</div>
-<?php endif; ?>
+<header id='header'>
+	<?php if(isset($header)) echo $header?>
+	<?php $this->views->render('header')?>
+</header>
 
 <div id='main'>
 <?php if(isset($main)) echo $main?>
 <?php $this->views->render('main')?>
 </div>
 
+<div class='push'></div>
 <div id='footer'>
 <?php if(isset($footer)) echo $footer?>
 <?php $this->views->render('footer')?>

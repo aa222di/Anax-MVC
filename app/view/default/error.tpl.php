@@ -1,3 +1,4 @@
+<div class='grid'>
 <h1><?=$title?></h1>
 
 <?php if (isset($content)) : ?>
@@ -7,3 +8,4 @@
 <?php if (isset($details)) : ?>
 <p><?=$details?></p>
 <?php endif; ?>
+</div>

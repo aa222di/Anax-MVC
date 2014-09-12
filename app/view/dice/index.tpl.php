@@ -1,3 +1,4 @@
+<div class='grid'>
 <h1>Throw a dice</h1>
 
 <p>This is an example of a app throwing a dice game.</p>
@@ -15,3 +16,4 @@
 
 <p>You got <?=$total?> as a total.</p>
 <?php endif; ?>
+</div>

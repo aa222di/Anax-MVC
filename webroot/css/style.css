@@ -4,15 +4,91 @@
 
 @import url(figure.css);
 
+/* FONTS
+------------------------------------------------------------------------------*/
+
 body {
-  color: #333;
-  font-family: arial, sans-serif;
-  overflow-y: scroll;
+    font: normal normal 300 17px/1.5em "Arial", sans-serif; 
+    color: #333;
+  
+}
+
+p {
+    font: normal normal 300 17px/1.5em "Georgia", 'Garamond', serif; 
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    text-align: justify;
 }
 
 h1 {
-  font-size: 2.2em;
+    font: normal normal 300 3em/1.5em "Arial", serif;
+    color: black;
+    
 }
+
+h2 {
+    font: normal normal 600 1.5em/1.5em "Arial", sans-serif;
+    
+}
+
+h3 {
+    font: normal normal 300 1.2em/1.5em "Arial", sans-serif;
+    
+}
+
+h4 {
+    font: normal normal 600 1.1em/1.5em "Arial", sans-serif;
+}
+
+a {
+    color:        #333;
+    text-decoration:  underline;  
+}
+
+a:hover {
+    text-decoration:  none; 
+}
+
+.center {
+  text-align:center;
+}
+
+ul {
+  list-style: square inside;
+  line-height: 1.5em;
+}
+
+pre {
+  font-family: monospace;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+
+/* IMAGES
+------------------------------------------------------------------------------*/
+img {
+    padding-top: 0.5em;
+    max-width: 100%;  
+}
+
+figcaption{
+  text-align:center;
+  font-size: 0.75em;
+  font-style: italic; 
+}
+
+.thumbnail {
+  max-height: 50px; 
+  max-width: 100px;
+}
+
 
 
 /**
@@ -20,8 +96,7 @@ h1 {
  */
 #wrapper {
   margin: 0 auto;
-  width: 980px; 
-  padding: 10px;
+  width: 100%; 
 }
 
 
@@ -76,13 +151,19 @@ h1 {
  */
 .article1 {
   width: 700px;
-  border-right: 1px solid #ccc;
+
   padding-right: 1em;
 }
 
 .article1 h1,
 .article1 h2 {
   border-bottom: 1px solid #ccc;
+}
+
+.article1 img {
+  width: 33%;
+  float: right;
+  padding: 15px;
 }
 
 .byline {

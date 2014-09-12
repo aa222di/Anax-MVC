@@ -128,7 +128,7 @@ class CThemeBasic implements IThemeEngine, \Anax\DI\IInjectionAware
             }
         }
 
-        // Sen response headers, if any.
+        // Send response headers, if any.
         $this->di->response->sendHeaders();
 
         // Create a view to execute the default template file
