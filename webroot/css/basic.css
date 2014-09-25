@@ -33,6 +33,7 @@ h2 {
 
 h3 {
 		font: normal normal 600 1.2em/1.5em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		display: inline;
 		
 }
 
@@ -207,12 +208,11 @@ input{
 	margin: 5px 0 10px 0;
 	padding: 5px;
 	font-size: 1em;
-	border: 2px solid #888;	
+	border: 1px solid #888;	
 
-	
 }
 
-.edit input[type=text] {
+input[type=text] {
 	width: 100%;
 	}
 
@@ -230,15 +230,7 @@ input[type=submit]:hover {
 	cursor: pointer; 
 }
 
-p#years>input {
-	width:25%;	
-}
 
-label{
-	display: block;
-	
-	
-}
 
 legend {
 	font: normal normal 300 1.2em/1.5em "Arial", sans-serif;
@@ -334,9 +326,6 @@ text-align: center;
 	padding: 20px;
 }
 
-.article1 {
-	margin-left: 25%;
-}
 
 .byline {
     border-top: 2px dotted;

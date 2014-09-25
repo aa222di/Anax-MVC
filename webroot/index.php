@@ -6,10 +6,21 @@ $app->navbar->configure(ANAX_APP_PATH . 'config/navbar_me.php');
 // Get better links
 $app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);
 
+// Set comment controller
+$di->set('CommentController', function() use ($di) {
+    $controller = new Phpmvc\Comment\CommentController();
+    $controller->setDI($di);
+    return $controller;
+});
+
+
 
 // Get pages
  
 $app->router->add('', function() use ($app) {
+     $app->theme->addStylesheet('css/comments.css');
+     $app->theme->addJavaScript('js/toggle.js');
+
      $app->theme->setTitle("Om Amanda");
 
      // Get content
@@ -25,11 +36,19 @@ $app->router->add('', function() use ($app) {
         'content'   => $content,
         'byline'    => $byline,
     ]);
+
+    // Include comments
+    $app->dispatcher->forward([
+        'controller' => 'comment',
+        'action'     => 'view',
+        'params'     => ['',],
+    ]);
  
 });
  
 $app->router->add('report', function() use ($app) {
-
+    $app->theme->addStylesheet('css/comments.css');
+    $app->theme->addJavaScript('js/toggle.js');
     $app->theme->setTitle("Redovisning");
 
     // Get content
@@ -46,6 +65,12 @@ $app->router->add('report', function() use ($app) {
         'byline'    => $byline,
     ]);
  
+       $app->dispatcher->forward([
+        'controller' => 'comment',
+        'action'     => 'view',
+        'params'     => ['report',],
+    ]);
+
 });
  
 $app->router->add('source', function() use ($app) {

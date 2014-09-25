@@ -51,6 +51,41 @@ class CViewContainerBasic implements \Anax\DI\IInjectionAware
         return $this;
     }
 
+    /**
+     * Add a view to be included as a template file.
+     *
+     * @param string $template the name of the template file to include
+     * @param array  $data     variables to make available to the view, default is empty
+     * @param string $region   which region to attach the view
+     * @param int    $sort     which order to display the views
+     *
+     * @return $this
+     */
+    public function config($template, $data = [], $region = 'main', $sort = 0) 
+    {
+        
+        $view = $this->di->get('view');
+
+        if (is_string($template)) {
+            $tpl = $this->path . $template . $this->suffix;
+            $type = 'file';
+        } elseif (is_array($template)) {
+            $tpl = $template;
+            $type = 'callback';
+        }
+
+        $view->set($tpl, $data, $sort, $type);
+        $view->setDI($this->di);
+
+       foreach ($this->views[$region] as $key) {
+            if ($this->views[$region][$key]->template == $tpl) {
+               $this->views[$region][$key] = $view;
+            }
+        } 
+        
+        return $this;
+    }
+
 
 
     /**

@@ -35,6 +35,12 @@ return [
                         'url'   => 'report#1',  
                         'title' => 'Kmom01'
                     ],
+
+                    'Kmom02'  => [
+                        'text'  => 'Kmom02',   
+                        'url'   => 'report#2',  
+                        'title' => 'Kmom02'
+                    ],
                 ],
             ],
         ],

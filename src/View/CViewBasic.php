@@ -16,7 +16,7 @@ class CViewBasic implements \Anax\DI\IInjectionAware
     * Properties
     *
     */
-    private $template;          // Template file or array 
+    public $template;          // Template file or array 
     private $templateData = []; // Data to send to template file
     private $sortOrder;         // For sorting views
     private $type;              // Type of view

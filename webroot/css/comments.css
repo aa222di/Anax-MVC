@@ -1,0 +1,21 @@
+/**
+ * Style for comments and comments form
+ */
+
+.comment-form .hidden label {
+    float: left;
+    width: 33%;
+    margin-right: 0.5%
+}
+
+.comment-form .hidden label:last-of-type {
+	margin: 0;
+}
+
+.comment-form textarea {
+	height: 80px;
+}
+
+.buttons {
+	clear: both;
+}
