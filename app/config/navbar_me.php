@@ -41,6 +41,12 @@ return [
                         'url'   => 'report#2',  
                         'title' => 'Kmom02'
                     ],
+
+                     'Kmom03'  => [
+                        'text'  => 'Kmom03',   
+                        'url'   => 'report#3',  
+                        'title' => 'Kmom03'
+                    ],
                 ],
             ],
         ],
@@ -77,6 +83,26 @@ return [
             'text'  =>'Kalender', 
             'url'   =>'calendar',  
             'title' => 'Se kalendern från kursen oophp'
+        ],
+
+             // This is a menu item
+        'theme' => [
+            'text'  =>'Theme Eden', 
+            'url'   =>'theme',  
+            'title' => 'Kmom03 Themes',
+
+             'submenu' => [
+
+                'items' => [
+
+                    // This is a menu item of the submenu
+                    'example'  => [
+                        'text'  => 'Example with FontAwesome',   
+                        'url'   => 'theme/example',  
+                        'title' => 'Example with FontAwesome'
+                    ],
+                ],
+            ],
         ],
     ],
  

@@ -1,6 +1,6 @@
 <div class='grid comment-form'>
     <form method=post>
-        <input type=hidden name="redirect" value="<?=$this->url->create($pageId) . '#comments'?>">
+        <input type=hidden name="redirect" value="<?=$this->url->create($this->request->getRoute()) . '#comments'?>">
         <input type=hidden name="pageId" value="<?=$pageId?>">
         <fieldset>
         <legend><?=$action?></legend>

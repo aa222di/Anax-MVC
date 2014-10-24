@@ -3,7 +3,7 @@ require __DIR__.'/config_with_app.php';
 $app->theme->configure(ANAX_APP_PATH . 'config/theme_me.php');
 $app->navbar->configure(ANAX_APP_PATH . 'config/navbar_me.php');
 
-// Get better links
+// Set link style
 $app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);
 
 // Set comment controller
@@ -97,6 +97,63 @@ $app->router->add('dice', function() use ($app) {
  
     $app->views->add('dice/index');
  
+});
+
+$app->router->add('theme', function() use ($app) {
+    $app->theme->configure(ANAX_APP_PATH . 'config/theme_eden.php');
+     $app->theme->addStylesheet('css/eden/style.php');
+     $app->theme->addJavaScript('js/menu.js');
+
+     $app->theme->setTitle("Om Amanda");
+     $app->theme->setVariable('themeclass','debug');
+
+
+    // Lorem ipsum
+    $lorem  = $app->fileContent->get('loremipsum.md');
+    $lorem = $app->textFilter->doFilter($lorem, 'shortcode, markdown');
+
+   
+
+    $app->views->addString('<p>Flash 1</p>', 'flash')
+               ->addString('<p>featured-1</p>', 'featured-1')
+               ->addString('<p>featured-2</p>', 'featured-2')
+               ->addString('<p>featured-3</p>', 'featured-3')
+               ->addString('<p>Flash 2</p>', 'flash-2')
+               ->addString('<p>main</p>', 'main')
+               ->addString('<p>sidebar</p>', 'sidebar')
+               ->addString('<p>triptych-1</p>', 'triptych-1')
+               ->addString('<p>triptych-2</p>', 'triptych-2')
+               ->addString('<p>triptych-3</p>', 'triptych-3')
+               ->addString('<p>Flash 3</p>', 'flash-3')
+               ->addString('Footer', 'footer');
+
+});
+
+$app->router->add('theme/example', function() use ($app) {
+    $app->theme->configure(ANAX_APP_PATH . 'config/theme_eden.php');
+     $app->theme->addStylesheet('css/eden/style.php');
+     $app->theme->addJavaScript('js/menu.js');
+
+     $app->theme->setTitle("Om Amanda");
+     $app->theme->setVariable('themeclass','example');
+
+
+    // Lorem ipsum
+    $lorem  = $app->fileContent->get('loremipsum.md');
+    $lorem = $app->textFilter->doFilter($lorem, 'shortcode, markdown');
+
+   
+
+    $app->views->addString('<img src="../img/blue.jpg">', 'flash')
+               ->addString('<i class="fa fa-camera-retro fa-5x"></i>', 'featured-1')
+               ->addString('<i class="fa fa-bug fa-5x"></i>', 'featured-2')
+               ->addString('<i class="fa fa-leaf fa-5x"></i>', 'featured-3')
+               ->addString('<h1>Lorem ipsum dolor sit amet</hi>', 'flash-2')
+               ->addString('<article>' . $lorem . '</article>', 'triptych-1')
+               ->addString('<article>' . $lorem . '</article>', 'triptych-2')
+               ->addString('<article>' . $lorem . '</article>', 'triptych-3')
+               ->addString('<i class="fa fa-heart fa-1x"></i>', 'footer');
+
 });
 
 
