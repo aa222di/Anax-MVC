@@ -47,6 +47,11 @@ return [
                         'url'   => 'report#3',  
                         'title' => 'Kmom03'
                     ],
+                    'Kmom04'  => [
+                        'text'  => 'Kmom04',   
+                        'url'   => 'report#4',  
+                        'title' => 'Kmom04'
+                    ],
                 ],
             ],
         ],
@@ -103,6 +108,12 @@ return [
                     ],
                 ],
             ],
+        ],
+               // This is a menu item
+        'database' => [
+            'text'  =>'UserDB', 
+            'url'   =>'users/list',  
+            'title' => 'Användare'
         ],
     ],
  

@@ -15,8 +15,10 @@
     ],
     "require": {
         "php": ">=5.4",
+        "mos/cdatabase": "dev-master",
         "phpmvc/comment": "dev-master",
-        "jimmiw/php-time-ago": "dev-master"
+        "jimmiw/php-time-ago": "dev-master",
+        "mos/cform": "2.*@dev"
     },
     "require-dev": {
         "satooshi/php-coveralls": "dev-master"

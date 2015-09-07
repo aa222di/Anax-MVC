@@ -1,6 +1,31 @@
 Redovisning
 ====================================
  
+Kmom04: Databasdrivna modeller  {#4}
+------------------------------------
+### Vad tycker du om formulärhantering som visas i kursmomentet?
+Jag uppskattar verkligen CForm. Under förra projektet försökte jag själv på mig ett CForm-bygge eftersom jag ville effektivisera formulärhanteringen. Dock fick jag aldrig till någon vettig validering och egentligen inte heller särskilt bra upphämtande av form-values. Jag måste dock säga att jag fortfarande inte är helt säker på vad som händer i metoden check() och heller inte tanken bakom callbackSucess och Fail. Har en aning om att dessa skulle kanske kunna användas smidigare än vad jag gjorde nu.
+
+Något jag skulle vilja pilla vidare med längre fram, kanske i projektet t.ex. är formulärets rendering. Just nu är jag osäker på om jag är positiv till att kapsla in allt i p-taggar. Dessutom såg jag att ett par extra p-taggar renderas ut mellan element. Det gillar jag inte, skulle hellre vilja uppgradera så att man lättare an kapsla in element som man vill eller helt utesluta p-taggar.
+
+### Vad tycker du om databashanteringen som visas, föredrar du kanske traditionell SQL?
+Även cdatabase är en class som jag vekrligen uppskattar. Detta var något som jag också försöte mig på under förra projektet just för att jag snabbt tröttnade på att skriva samma queries om och om igen. CDatabaseBasic har ett helt annat upplägg än vad min klass hade. Jag tycker det var smart och enklare än vad jag tänkt mig att dela upp query:n i olika metoder (where, andWhere, etc.) All CRUD-funktionalitet känns oehört lätttillgänglig. Jag har inte försökt mig på några joiner eller liknande men av vad jag kan se ska detta nog inte vara alltför svårt heller.
+
+### Gjorde du några vägval, eller extra saker, när du utvecklade basklassen för modeller?
+Jag lade alla metoder för CRUD i CDatabaseModel. Däremot hamnade setup() i Users.php eftersom den är specifik för User. Jag kan tänkte mig att längre fram är det möjligt att fler metoder kommer att växa i User, t.ex. joiner med andra modeller eller specifika fall för just dne tabellen. Jag lade in till något extra i CDatabaseModel utan lät den vara så som den blev i slutet av övningen. Som jag ser det nu så är den även ganska komplett i det stadie den är nu. Som jag sa så tror jag att de nya metoder som kan tillkomma förmodligen kommer vara specifika för varje modell.
+
+### Beskriv vilka vägval du gjorde och hur du valde att implementera kommentarer i databasen.
+Egentligen var inte detta den svåraste biten eller den bit som innebar flest vägval för min del. Utan det som jag har lagt mest tankekraft på och som jag i ärligehtens namn fortfarand einte är säker på att jag gjort "rätt", är samsepelet mellan kontroller och modeller samt index-sidan och olika redirects. Rätt är givetvis relativt, det fungerar ju så som det står nu. Men jag vet inte om jag kanske tar vissa omvägar här. 
+
+Min första fundering gällde hur jag skulle implementera CForm på ett bra sätt. Skulle varje formulär skapas i den kontroll som använde det? Eller i templates? Eller skulle varje formulär få en egen klass i still med CFormUser, CFormComment etc. Jag läste bland redovisiningar att det visst var några som valt att skapa just enskilda klasser för varje formulär. En fördel med det är ju att det är enkelt att exportera och importera. Nu i efterhand tänker jag tom att detta kanske skulle vara det bästa. I vilket fall som helst så valde jag att skapa en kontroller för formlär. Kontrollerna har sedan metoder såsom userFormAction() osv. Sedan använda jag dispatchern inifrån userController och commentController för att anropa olika formulär. Och ifrån formController ropade jag sedan tillbaka till user- och commentcontroller. Jag skulle dock vilja vara ut det där sista ropet tillbaka till controllerna och på något vis använda CForm så att jag slipper det. Men mitt problem var hela tiden att jag villa behålla metoder som save() och find() osv. i de controller som var anslutna till databasen. Kort sagt kan man sammanfatta att min lösning fungerar men jag skulle vilja veta om det är tänkt att man använder kontroller på detta vis eller om det finns ett smidigare sätt att gå till väga via classer kanske?
+
+Det positiva var i alla fall att när jag väl skulle ge stöd för databaslagring för kommentarerna så var dte bara att kopiera min usercontroller ganska rakt av och jag fick inga större problem med implementeringen.
+
+### Gjorde du extrauppgiften? Beskriv i så fall hur du tänkte och vilket resultat du fick
+Nej, tyvärr drog jag ut på tiden alldeles för mycket under det här momentet.
+
+
+
 Kmom03: Grid, FontAwesome och LESS  {#3}
 ------------------------------------
 ### Vad tycker du om CSS-ramverk i allmänhet och vilka tidigare erfarenheter har du av dem?

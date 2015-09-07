@@ -1,5 +1,5 @@
 
-jQuery('.toggler:not(.active)').next('div').hide();
+jQuery('.toggler:not(.active)').next('.hidden').hide();
 
 jQuery('.toggler').click(function() {		
 	

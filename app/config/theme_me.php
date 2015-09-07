@@ -56,7 +56,7 @@ return [
         'title_append' => ' | PHPMVC',
 
         // Stylesheets
-        'stylesheets' => ['css/grid.css' ,'css/basic.css' , 'css/navbar.css'],
+        'stylesheets' => ['css/grid.css' ,'css/basic.css' , 'css/navbar.css', 'css/comments.css'],
 
         // Inline style
         'style' => null,

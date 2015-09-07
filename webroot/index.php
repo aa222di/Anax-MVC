@@ -6,12 +6,7 @@ $app->navbar->configure(ANAX_APP_PATH . 'config/navbar_me.php');
 // Set link style
 $app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);
 
-// Set comment controller
-$di->set('CommentController', function() use ($di) {
-    $controller = new Phpmvc\Comment\CommentController();
-    $controller->setDI($di);
-    return $controller;
-});
+
 
 
 
@@ -40,8 +35,7 @@ $app->router->add('', function() use ($app) {
     // Include comments
     $app->dispatcher->forward([
         'controller' => 'comment',
-        'action'     => 'view',
-        'params'     => ['',],
+        'params'     => [],
     ]);
  
 });
@@ -67,8 +61,7 @@ $app->router->add('report', function() use ($app) {
  
        $app->dispatcher->forward([
         'controller' => 'comment',
-        'action'     => 'view',
-        'params'     => ['report',],
+        'params'     => [],
     ]);
 
 });
@@ -104,7 +97,7 @@ $app->router->add('theme', function() use ($app) {
      $app->theme->addStylesheet('css/eden/style.php');
      $app->theme->addJavaScript('js/menu.js');
 
-     $app->theme->setTitle("Om Amanda");
+     $app->theme->setTitle("Eden debug");
      $app->theme->setVariable('themeclass','debug');
 
 
@@ -134,7 +127,7 @@ $app->router->add('theme/example', function() use ($app) {
      $app->theme->addStylesheet('css/eden/style.php');
      $app->theme->addJavaScript('js/menu.js');
 
-     $app->theme->setTitle("Om Amanda");
+     $app->theme->setTitle("Eden example");
      $app->theme->setVariable('themeclass','example');
 
 
@@ -157,7 +150,16 @@ $app->router->add('theme/example', function() use ($app) {
 });
 
 
+// Route to roll dice and show results
+$app->router->add('database', function() use ($app) {
+
  
+    $app->theme->setTitle("Databastest");
+    
+ 
+}); 
+
+
 // Route to roll dice and show results
 $app->router->add('dice/roll', function() use ($app) {
 

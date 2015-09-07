@@ -16,6 +16,7 @@ class CGameboard extends CDice2 {
 	 private $players = array();
 	 private $CForm; // Obj
 	 public  $turn;
+	 public $time_start;
 	 
 	 
 	 /**
@@ -35,12 +36,14 @@ class CGameboard extends CDice2 {
 	  	$this->turn = 0;
     	$this->score = array();
     	$this->CForm = new CForm();
+    	
       }
      
       // Methods
       	
 
       		public function getGameboard() {
+      			$this->time_start = microtime(true);
       			$message = null;
       			$gameboard = "<a href='?start=true#dice' class='regretbutton'>Start game</a>";
       			// Build gameboard
@@ -95,6 +98,15 @@ class CGameboard extends CDice2 {
 
       			}
       			write:
+      			//$this->time_start = microtime(true);
+      			//usleep(1000);
+      			$time_end = microtime(true);
+				$time = $time_end - $this->time_start;
+				if(0){
+					echo "true";
+				}
+
+				echo "Did nothing in $time seconds\n";
 
       			return $gameboard;
 
