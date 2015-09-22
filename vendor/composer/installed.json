@@ -51,18 +51,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/mosbth/cform.git",
-            "reference": "c631276a9e0f97cc725f56e7744a703974a4767f"
+            "reference": "0e8a31d135a06b72f29abe9df21c09566344d3f5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mosbth/cform/zipball/c631276a9e0f97cc725f56e7744a703974a4767f",
-            "reference": "c631276a9e0f97cc725f56e7744a703974a4767f",
+            "url": "https://api.github.com/repos/mosbth/cform/zipball/0e8a31d135a06b72f29abe9df21c09566344d3f5",
+            "reference": "0e8a31d135a06b72f29abe9df21c09566344d3f5",
             "shasum": ""
         },
         "require": {
             "php": ">=5.4"
         },
-        "time": "2014-06-04 10:53:04",
+        "time": "2015-05-20 11:57:09",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -97,18 +97,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/jimmiw/php-time-ago.git",
-            "reference": "f762b9fa21c949d757fc41ddfe0b495785d57bc9"
+            "reference": "e0b77a1e364ad1a0f8a72e75106ed2d8a2c6e9f9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/jimmiw/php-time-ago/zipball/f762b9fa21c949d757fc41ddfe0b495785d57bc9",
-            "reference": "f762b9fa21c949d757fc41ddfe0b495785d57bc9",
+            "url": "https://api.github.com/repos/jimmiw/php-time-ago/zipball/e0b77a1e364ad1a0f8a72e75106ed2d8a2c6e9f9",
+            "reference": "e0b77a1e364ad1a0f8a72e75106ed2d8a2c6e9f9",
             "shasum": ""
         },
         "require": {
             "php": ">=4"
         },
-        "time": "2014-10-09 07:27:04",
+        "time": "2015-08-11 07:48:59",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -142,18 +142,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/mosbth/cdatabase.git",
-            "reference": "bc8627e364e632253cf8ccbdc78efc70b3c772c9"
+            "reference": "5746aa83f062321f8f9016f0bc57a6c0e65300fb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mosbth/cdatabase/zipball/bc8627e364e632253cf8ccbdc78efc70b3c772c9",
-            "reference": "bc8627e364e632253cf8ccbdc78efc70b3c772c9",
+            "url": "https://api.github.com/repos/mosbth/cdatabase/zipball/5746aa83f062321f8f9016f0bc57a6c0e65300fb",
+            "reference": "5746aa83f062321f8f9016f0bc57a6c0e65300fb",
             "shasum": ""
         },
         "require": {
             "php": ">=5.4"
         },
-        "time": "2014-05-19 07:48:35",
+        "time": "2015-03-13 15:36:43",
         "type": "library",
         "installation-source": "source",
         "autoload": {
