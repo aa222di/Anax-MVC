@@ -47,6 +47,12 @@ class CDIFactoryExtended extends CDIFactoryDefault
             $controller->setDI($this);
             return $controller;
         });
+
+        $this->set('logger', function() {
+            $logger = new \Eden\Log\Clog();
+            //$controller->setDI($logger);
+            return $logger;
+        });
     }
 
 }

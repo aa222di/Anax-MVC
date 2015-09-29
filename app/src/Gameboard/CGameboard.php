@@ -106,7 +106,7 @@ class CGameboard extends CDice2 {
 					echo "true";
 				}
 
-				echo "Did nothing in $time seconds\n";
+				//echo "Did nothing in $time seconds\n";
 
       			return $gameboard;
 

@@ -26,6 +26,7 @@ $app->router->add('', function() use ($app) {
     $byline  = $app->fileContent->get('byline.md');
     $byline = $app->textFilter->doFilter($byline, 'shortcode, markdown');
 
+
      // Inject content
      $app->views->add('me/page', [
         'content'   => $content,
@@ -37,6 +38,10 @@ $app->router->add('', function() use ($app) {
         'controller' => 'comment',
         'params'     => [],
     ]);
+
+    
+
+    
  
 });
  
@@ -151,13 +156,7 @@ $app->router->add('theme/example', function() use ($app) {
 
 
 // Route to roll dice and show results
-$app->router->add('database', function() use ($app) {
 
- 
-    $app->theme->setTitle("Databastest");
-    
- 
-}); 
 
 
 // Route to roll dice and show results
@@ -213,7 +212,7 @@ $app->router->add('dicegame', function() use ($app) {
 
 $app->router->add('calendar', function() use ($app) {
     
-    $cal = new \eden\Calendar\CCalendar();
+    $cal = new \eden\Calendar\CCalendar($app);
 
     $app->theme->addStylesheet('css/calendar.css');
     $app->theme->setTitle("Kalender");
@@ -229,3 +228,4 @@ $app->router->add('calendar', function() use ($app) {
 
 $app->router->handle();
 $app->theme->render();
+echo $app->logger->renderLog();

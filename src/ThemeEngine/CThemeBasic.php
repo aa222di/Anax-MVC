@@ -109,6 +109,7 @@ class CThemeBasic implements IThemeEngine, \Anax\DI\IInjectionAware
      */
     public function render()
     {
+        $this->di->logger->stamp(__CLASS__, __METHOD__, 'Theme rendering phase starts');
         // Prepare details
         $path       = $this->config['settings']['path'];
         $name       = $this->config['settings']['name'] . '/';

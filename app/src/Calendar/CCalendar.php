@@ -15,13 +15,16 @@ class CCalendar {
 	public $prevLink; // string
 	public $nextLink; // string
 
+	private $di;
+
 	// CONSTRUCTOR
 	// Gets current dates
-	public function __construct() {
+	public function __construct($app) {
 		$today = getdate();
 		$this->currentMonth = $today['mon'];
 		$this->currentDate 	= $today['mday'];
 		$this->currentYear 	= $today['year'];
+		$this->di = $app;
 	}
 
 	// PUBLIC METHODS
@@ -33,6 +36,8 @@ class CCalendar {
 	public function getCalendar() {
 		$this->setDate();
 		$this->getLinks();
+		 $this->di->logger->stamp(__CLASS__, __METHOD__, '');
+
 
 		// Get new date array
 		$newDate = getdate(mktime(0,0,0,$this->newMonth, 1, $this->newYear));
@@ -102,6 +107,7 @@ class CCalendar {
 	 */
 	private function setDate(){
 	// Validate incoming parameters
+		$this->di->logger->stamp(__CLASS__, __METHOD__, '');
 	if (isset($_GET['month'])) {
 		is_numeric($_GET['month']) or die('month has to be numeric');
 	}
